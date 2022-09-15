@@ -52,6 +52,7 @@ body {
     }
   }
   .containerCatalogo {
+    position: relative;
     width: 45vw;
     height: 80vh;
   }
@@ -114,20 +115,21 @@ body {
 .editBtn {
   position: absolute;
   top: 0; left: 0px;
-  width: 3vw;
   height: 4vh;
   display: flex;
   align-items: center;
+
   & input {
     outline: none;
   }
-  
-
+  :nth-child(1){
+    background-color: #bb89aa;
+  }
   & span {
     z-index: 999;
     padding: 10px 5px 4px 6px;
     color: #fff;
-    background-color: #bb89aa;
+
     & button {
       background-color: rgb(69, 107, 73);
       border: none;
@@ -140,7 +142,6 @@ body {
     }
   }
   & .show {
-    width: 15vw;
     max-width: 150px;
     padding: 10px;
     border: #fff;
@@ -153,12 +154,32 @@ body {
   & .close {
     display: none;
   }
-  @keyframes showing {
-    from {margin-left: -190px;} 
-    to {margin-left: 0px;}
-  }
+}
+@keyframes showing {
+  from {margin-left: -190px;} 
+  to {margin-left: 0px;}
 }
 
+.statusValidate {
+  animation: showing .1s alternate ease-in-out;
+  position: absolute;
+  top: 39px;
+  min-width: 342px;
+  text-align: center;
+}
+.color-sucess {
+  color: rgb(47 100 47) !important;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.color-error {
+  color: rgb(255, 255, 255) !important;
+}
+.editPencil {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 
 .container-catalogo {
   background-color: #fff;
@@ -180,7 +201,12 @@ body {
   .description {
       margin: 0px 14px 10px 15px;
       width: 65%;
-
+      position: relative;
+      & span {
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
   }
 }
 
