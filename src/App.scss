@@ -55,11 +55,11 @@ body {
     position: relative;
     width: 45vw;
     height: 80vh;
+    overflow-y: auto;
   }
   .catalogos {
     color: #fff;
     height: 75.5vh;
-    overflow-y: auto;
     & a {
       text-decoration: none;
     }
@@ -175,12 +175,22 @@ body {
 .color-error {
   color: rgb(255, 255, 255) !important;
 }
-.editPencil {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
+// .editPencil {
+//   position: absolute;
+//   right: 10px;
+//   top: 10px;
+// }
 
+.deleteCatalogo {
+  position:absolute; 
+  right: 20px; 
+  margin-top: 5px;
+  z-index: 9999;
+  & :hover {
+    cursor: pointer;
+    color: rgb(114, 114, 114);
+  }
+}
 .container-catalogo {
   background-color: #fff;
   color: #000;
@@ -188,6 +198,8 @@ body {
   height: 20vh;
   margin: 20px 10px 0 0;
   box-shadow: 0px 0px 6px 2px #aeaeae;
+
+
   .capa-catalogo{
       width: 35%;
       img {
